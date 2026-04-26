@@ -2,11 +2,11 @@
 
 A privacy-focused Chrome extension that summarizes WhatsApp Web conversations using Chrome's built-in Gemini Nano AI.
 
-## 📺 Demo
+## Demo
 
 ![Demo](assets/demo.gif)
 
-> **🔊 [Watch with audio narration](assets/demo.mp4)** - Download the video (1.1MB) to hear the full explanation of how all processing happens privately on your device.
+> **🔊 [Watch with audio narration](assets/demo.mp4)** - Download the video to hear the full explanation.
 
 The demo shows:
 - How to use the extension on WhatsApp Web
@@ -119,7 +119,3 @@ python generate_video.py
 ```
 
 This will create a new `demo.mp4` with voice narration.
-
-## License
-
-MIT
