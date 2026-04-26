@@ -123,6 +123,8 @@ This extension follows Chrome extension security best practices:
 
 ## Regenerating the Demo Video
 
+**Note:** Demo video generation currently only works on macOS (requires the `say` command for text-to-speech).
+
 To regenerate the demo video with updated content:
 
 ```bash
@@ -131,4 +133,4 @@ source ../.venv/bin/activate
 python generate_video.py
 ```
 
-This will create a new `demo.mp4` with voice narration.
+This will create a new `demo.mp4` with voice narration using the Samantha voice.
