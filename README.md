@@ -89,6 +89,19 @@ WhatsApp Web → Content Script → Popup → Gemini Nano (local) → Display
                                     Never leaves your device
 ```
 
+### Content Script vs Popup Script
+
+```
+WhatsApp Web Page          Extension Popup
+     |                          |
+     v                          v
+content.js  <-- message --> popup.js
+     |      passing             |
+     |                          |
+Extracts messages      Processes with AI
+from DOM              and shows results
+```
+
 ## Security
 
 This extension follows Chrome extension security best practices:
