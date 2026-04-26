@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Summarizer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>WhatsApp Summarizer</h1>
+
+    <div id="status" class="status">
+      <span id="status-icon" class="status-icon"></span>
+      <span id="status-text">Checking Gemini Nano...</span>
+    </div>
+
+    <div class="tabs">
+      <button id="tab-summary" class="tab active">Summary</button>
+      <button id="tab-ask" class="tab">Ask</button>
+    </div>
+
+    <div id="panel-summary" class="panel">
+      <div class="buttons">
+        <button id="brief-btn" class="btn btn-primary" disabled>tl;dr brief</button>
+        <button id="verbose-btn" class="btn btn-secondary" disabled>tl;dr verbose</button>
+      </div>
+
+      <div id="loading-summary" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Generating summary...</span>
+      </div>
+
+      <div id="error-summary" class="error hidden"></div>
+
+      <div id="summary-container" class="result-container hidden">
+        <div class="result-header">
+          <h2>Summary</h2>
+          <div class="result-actions">
+            <button id="speak-summary-btn" class="btn-action" title="Read aloud">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <span class="action-text">Read</span>
+            </button>
+            <button id="copy-summary-btn" class="btn-action" title="Copy to clipboard">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span class="action-text">Copy</span>
+            </button>
+          </div>
+        </div>
+        <div id="summary" class="result"></div>
+      </div>
+    </div>
+
+    <div id="panel-ask" class="panel hidden">
+      <div class="question-section">
+        <input type="text" id="question-input" class="question-input" placeholder="Ask a question about this chat..." maxlength="500" disabled>
+        <button id="ask-btn" class="btn btn-ask" disabled>Ask</button>
+      </div>
+
+      <div id="loading-ask" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Finding answer...</span>
+      </div>
+
+      <div id="error-ask" class="error hidden"></div>
+
+      <div id="answer-container" class="result-container hidden">
+        <div class="result-header">
+          <h2>Answer</h2>
+          <div class="result-actions">
+            <button id="speak-answer-btn" class="btn-action" title="Read aloud">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <span class="action-text">Read</span>
+            </button>
+            <button id="copy-answer-btn" class="btn-action" title="Copy to clipboard">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span class="action-text">Copy</span>
+            </button>
+          </div>
+        </div>
+        <div id="answer" class="result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
