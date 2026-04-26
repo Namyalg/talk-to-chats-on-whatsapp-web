@@ -2,13 +2,13 @@
 
 A privacy-focused Chrome extension that summarizes WhatsApp Web conversations using Chrome's built-in Gemini Nano AI.
 
-## 📺 Demo Video
+## 📺 Demo
 
-> **🔊 Turn on your sound!** The video includes voice narration explaining how all processing happens on your device with complete privacy.
+![Demo](assets/demo.gif)
 
-<video src="https://github.com/Namyalg/talk-to-chats-on-whatsapp-web/raw/master/assets/demo.mp4" width="100%" controls></video>
+> **🔊 [Watch with audio narration](assets/demo.mp4)** - Download the video (1.1MB) to hear the full explanation of how all processing happens privately on your device.
 
-The video demonstrates:
+The demo shows:
 - How to use the extension on WhatsApp Web
 - All processing happens locally on your device using Chrome's Gemini Nano
 - No data is sent to external servers
