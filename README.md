@@ -4,7 +4,10 @@ A privacy-focused Chrome extension that summarizes WhatsApp Web conversations us
 
 ## 📺 Demo Video
 
-Watch the [demo video](assets/demo.mp4) with narration explaining the privacy-first approach.
+<video width="100%" controls>
+  <source src="assets/demo.mp4" type="video/mp4">
+  Your browser doesn't support the video tag. <a href="assets/demo.mp4">Download the demo video</a>.
+</video>
 
 The video demonstrates:
 - How to use the extension on WhatsApp Web
